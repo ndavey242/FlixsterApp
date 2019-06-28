@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="#FAEEEE">
 
     <ImageView
         android:id="@+id/ivBackdropImage"
@@ -16,25 +17,32 @@
         app:srcCompat="@drawable/flicks_backdrop_placeholder" />
 
     <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:text="Movie Title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivBackdropImage"
-        app:layout_constraintTop_toTopOf="@+id/ivBackdropImage" />
-
-    <TextView
         android:id="@+id/tvOverview"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
         android:text="Movie Overview"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/tvTitle"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+        app:layout_constraintStart_toStartOf="@+id/btnTitle"
+        app:layout_constraintTop_toBottomOf="@+id/btnTitle"
+        android:ellipsize="end"
+        android:maxLines="7"/>
+
+    <Button
+        android:id="@+id/btnTitle"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="#FFFAEEEE"
+        android:cursorVisible="true"
+        android:gravity="center|left"
+        android:onClick="onClickTitle"
+        android:text="Movie Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ivBackdropImage"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

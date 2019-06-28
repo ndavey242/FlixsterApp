@@ -1,10 +1,14 @@
 package com.example.flixsterapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.flixsterapp.models.Config;
@@ -158,6 +162,24 @@ public class MovieListActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
 
         }
+    }
+
+    public void onClickTitle(View itemView){
+
+
+
+        Intent intent = new Intent(MovieListActivity.this, IndividualMovieActivity.class);
+        //get the title
+        Button btnTitle = (Button) findViewById(R.id.btnTitle);
+        String title = btnTitle.getText().toString();
+        //get the overview
+        TextView tvOverview = (TextView) findViewById(R.id.tvOverview);
+        String overview = tvOverview.getText().toString();
+        //get the image
+
+        intent.putExtra("MOVIE_TITLE", title);
+        intent.putExtra("MOVIE_OVERVIEW", overview);
+        startActivity(intent);
     }
 
 }

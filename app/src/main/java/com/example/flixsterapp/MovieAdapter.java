@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -60,7 +61,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
         //get the movie data at that position
         Movie movie = movies.get(position);
         //populate the view with the data from the movie
-        viewHolder.tvTitle.setText(movie.getTitle());
+        viewHolder.btnTitle.setText(movie.getTitle());
         viewHolder.tvOverview.setText(movie.getOverview());
 
         //determine the layout orientation
@@ -115,7 +116,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
         //track view objects
         ImageView ivPosterImage;
         ImageView ivBackdropImage;
-        TextView tvTitle;
+        TextView btnTitle;
         TextView tvOverview;
 
         public ViewHolder(View itemView){
@@ -123,7 +124,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             //lookup items by id
             ivPosterImage = (ImageView) itemView.findViewById(R.id.ivPosterImage);
             ivBackdropImage = (ImageView) itemView.findViewById(R.id.ivBackdropImage);
-            tvTitle = (TextView) itemView.findViewById(R.id.tvTitle);
+            btnTitle = (Button) itemView.findViewById(R.id.btnTitle);
             tvOverview = (TextView) itemView.findViewById(R.id.tvOverview);
         }
 
