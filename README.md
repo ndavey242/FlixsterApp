@@ -16,7 +16,7 @@ The following **stretch** features are implemented:
   * [X] Title, Poster Image, Overview (Portrait mode)
   * [X] Title, Backdrop Image, Overview (Landscape mode)
 * [X] Display a nice default [placeholder graphic](https://guides.codepath.org/android/Displaying-Images-with-the-Glide-Library#advanced-usage) for each image during loading
-* [X] (Added a light pink background)Improved the user interface by experimenting with styling and coloring.
+* [X] (Added a light pink background, different title text) Improved the user interface by experimenting with styling and coloring.
 * [X] Apply rounded corners for the poster or background images using [Glide transformations](https://guides.codepath.org/android/Displaying-Images-with-the-Glide-Library#transformations)
 
 The following **additional** features are implemented:
